@@ -1,0 +1,218 @@
+{
+
+	"Insert For Loop": {
+		"prefix": "for-iterable",
+		"body": [
+			"for (${1:element} in ${2:list}) {",
+			"\t$0",
+			"}"
+		],
+		"description": "Loop over iterable"
+	},
+	"main fn": {
+		"prefix": "main",
+		"body": [
+			"static public function main():Void",
+			"{",
+			"   var args = Sys.args();",
+			"}"
+		],
+		"description": "main function"
+	},
+	"Insert Range Loop": {
+		"prefix": "for-range",
+		"body": [
+			"for (${1:index} in ${2:start} ... ${3:end}) {",
+			"\t$0",
+			"}"
+		],
+		"description": "Iterate over range"
+	},
+	"Insert function": {
+		"prefix": "function",
+		"body": [
+			"${1|public ,private |}${2|inline ,static ,macro |}function ${functionName}(${arguments}):${Type} {",
+			"\t$0",
+			"}"
+		],
+		"description": "Insert class function"
+	},
+	"Insert field": {
+		"prefix": "var-field",
+		"body": [
+			"${1|public ,private |}${2|inline ,static |}var ${fieldName}:${Type}$0;"
+		],
+		"description": "Insert class field"
+	},
+	"Insert variable": {
+		"prefix": "var-local",
+		"body": [
+			"var ${fieldName}:${type} = $0;"
+		],
+		"description": "Insert local variable"
+	},
+	"Insert getter-field": {
+		"prefix": "getter",
+		"body": [
+			"public var ${fieldName}(get, null):${Type};",
+			"inline function get_${fieldName}():${Type} {",
+			"\t$0",
+			"}"
+		],
+		"description": "Insert getter property and function"
+	},
+	"Insert setter-field": {
+		"prefix": "setter",
+		"body": [
+			"public var ${fieldName}(null, set):${Type};",
+			"inline function set_${fieldName}(value:${Type}) {",
+			"\t$0",
+			"}"
+		],
+		"description": "Insert setter property and function"
+	},
+	"Insert typedef": {
+		"prefix": "typedef",
+		"body": [
+			"typedef ${Typedef} = $0"
+		],
+		"description": "Insert typedef"
+	},
+	"Insert class": {
+		"prefix": "class",
+		"body": [
+			"class ${Class} {",
+			"\tpublic function new() {",
+			"$2$0",
+			"\t}",
+			"}"
+		],
+		"description": "Insert Haxe class"
+	},
+	"Insert switch": {
+		"prefix": "switch",
+		"body": [
+			"switch (${subject})",
+			"{",
+			"\tcase 1:",
+			"\t\t//contenido;",
+			"\tcase 2:",
+			"\t\t//contenido;",
+			"\tdefault:",
+			"\t\t//contenido;",
+			"}"
+		],
+		"description": "Insert Haxe switch"
+	},
+	"Insert while": {
+		"prefix": "while",
+		"body": [
+			"while (${condition}){",
+			"\t//contenido;",
+			"}"
+
+		],
+		"description": "Insert Haxe while"
+	},
+
+	"Insert interface": {
+		"prefix": "interface",
+		"body": [
+			"interface ${Interface} {",
+			"\t$0",
+			"}"
+		],
+		"description": "Insert Haxe interface"
+	},
+	"Insert abstract": {
+		"prefix": "abstract",
+		"body": [
+			"abstract ${AbstractClass}(${Type}) {",
+			"\t$0",
+			"}"
+		],
+		"description": "Insert Haxe abstract"
+	},
+	"Constructor": {
+		"prefix": "ctor",
+		"body": [
+			"public function new() { }"
+
+		],
+		"description": "default constructor in haxe"
+	},
+
+
+	"static Function": {
+		"prefix": "stfn",
+		"body": [
+			"static function ${1:fn} (${3:arg} ${4: :Type} ${5:, arg2:...} ) : ${ret:retType}",
+			"{",
+			"   var result:${ret:retType};",
+			"   $6",
+			"",
+			"   return result;",
+			"}"
+		],
+		"description": "static function"
+
+	},
+
+
+
+	"sfn": {
+		"description": "simple static fn",
+		"prefix": "sfn",
+		"body": [
+			"static function ${1:func_name} : ${ret:return_type}",
+			"{",
+			"   var result:${ret};",
+			"   ${body}",
+			"",
+			"   return result;",
+			"}"
+		]
+	},
+	"trace": {
+		"description": "trace",
+		"prefix": "t",
+		"body": [
+			"trace(${var});"
+		]
+	},
+
+	"fn": {
+		"description": "simple fn",
+		"prefix": "fn",
+		"body": [
+			"function ${1:func_name} : ${ret:return_type}",
+			"{",
+			"   var result:${ret};",
+			"   ${body}",
+			"   ",
+			"   return result;",
+			"}"
+		]
+	},
+
+	"enum flags": {
+		"description": "enum flags, shamelessly copied from http://blog.stroep.nl/2015/08/biwise-operations-made-easy-with-haxe/ ",
+		"prefix": "flags",
+		"body": [
+			"// enum flags. taken from http://blog.stroep.nl/2015/08/biwise-operations-made-easy-with-haxe/ ",
+			"@:enum abstract ${1:name}(Int) from Int to Int\n\t{\n\t\tvar None = 0;\n\t\tvar ${2:A} = value(0);\n\t\tvar B = value(1);\n\t\tvar C = value(2);\n\n",
+			"static inline function value(index:Int) return 1 << index;",
+			"inline public static function add(bits:Int, mask:Int):Int  return bits | mask;",
+			"inline public static function remove (bits:Int, mask:Int):Int  return bits & ~mask;",
+			"inline public static function contains (bits :Int, mask :Int):Bool return bits & mask != 0;",
+			"inline function new(v:Int) this = v;",
+			"inline function toInt():Int    return this;",
+			"}"
+
+
+		]
+	}
+
+
+
+}
