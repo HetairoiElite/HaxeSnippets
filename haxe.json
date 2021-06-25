@@ -9,6 +9,15 @@
 		],
 		"description": "Loop over iterable"
 	},
+	"Insert If": {
+		"prefix": "if",
+		"body": [
+			"if(${condition}) {",
+			"\t$0",
+			"}"
+		],
+		"description": "if statement"
+	},
 	"main fn": {
 		"prefix": "main",
 		"body": [
