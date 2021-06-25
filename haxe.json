@@ -134,6 +134,14 @@
 		],
 		"description": "Insert Haxe while"
 	},
+	"Insert do-while": {
+		"prefix": "do-while",
+		"body": [
+			"do expression while (${condition});"
+
+		],
+		"description": "Insert Haxe do-while"
+	},
 
 	"Insert interface": {
 		"prefix": "interface",
