@@ -18,6 +18,17 @@
 		],
 		"description": "if statement"
 	},
+	"Insert If-else": {
+		"prefix": "if-else",
+		"body": [
+			"if(${condition}) {",
+			"\t$0",
+			"} else {",
+			"\t$0",
+			"}"
+		],
+		"description": "if-else statement"
+	},
 	"main fn": {
 		"prefix": "main",
 		"body": [
