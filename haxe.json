@@ -13,7 +13,7 @@
 		"prefix": "if",
 		"body": [
 			"if(${condition}) {",
-			"\t$0",
+			"\t//contenido;",
 			"}"
 		],
 		"description": "if statement"
@@ -22,9 +22,9 @@
 		"prefix": "if-else",
 		"body": [
 			"if(${condition}) {",
-			"\t$0",
+			"\t//contenido;",
 			"} else {",
-			"\t$0",
+			"\t//contenido;",
 			"}"
 		],
 		"description": "if-else statement"
@@ -146,7 +146,7 @@
 		"prefix": "do-while",
 		"body": [
 			"do {",
-			"\t//expresion;",
+			"\t//contenido;",
 			"} while (${condition});"
 
 		],
