@@ -152,9 +152,18 @@
 		],
 		"description": "Insert Haxe do-while"
 	},
+	"Insert try-catch": {
+		"prefix": "try-catch",
+		"body": [
+			"try {",
+			"\t//doSomething();",
+			"} catch(e:Any) {",
+			"\t// All exceptions will be caught here",
+			"}"
 
-
-
+		],
+		"description": "Insert Haxe do-while"
+	},
 	"Insert interface": {
 		"prefix": "interface",
 		"body": [
